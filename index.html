@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>養兒試算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="ntd">NTD</div>
+        <div id="result" class="result">0</div>
+    </div>
+    
+    <div id="persona" class="persona"></div>
+    <!--A-->
+    <div class="pre-birth">
+        <h2>出生前</h2> 
+
+        <div><br>產檢 <br>
+                <input name="A03" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="15000">
+                產檢*10次 - NTD 15000
+
+                <input name="A03" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="12000">
+                墮胎手術 - NTD 12000
+            </div>
+        <div><br>生產+病房 <br>
+                <input name="A04" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="3000">
+                自然產 - NTD 3000
+
+                <input name="A04" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="20000">
+                剖腹 - NTD 20000
+            </div>
+        <div><br>坐月子 <br>
+                <input name="A05" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="0">
+                公婆家 - NTD 0
+
+                <input name="A05" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="100000">
+                低配 - NTD 100000
+
+                <input name="A05" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="400000">
+                高配 - NTD 400000
+            </div>
+    </div>
+    <br><br>     
+    <!--B-->
+    <div class="t0-2">
+        <h2>0~2歲</h2> 
+        <div><br>嬰兒食物 <br>
+                <input name="B07" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="30000">
+                全聯 - NTD 30000
+
+                <input name="B07" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="150000">
+                有機小農高鈣營養DHA - NTD 150000
+            </div>
+        <div><br>嬰兒服裝 <br>
+                <input name="B08" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="15000">
+                夜市 - NTD 15000
+
+                <input name="B08" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="120000">
+                新光三越 - NTD 120000
+            </div>
+        <div><br>嬰兒床 <br>
+                <input name="B09" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="5000">
+                淘寶 - NTD 5000
+
+                <input name="B09" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="20000">
+                席夢思 - NTD 20000
+            </div>
+        <div><br>看感冒三年 15次 <br>
+                <input name="B11" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="4500">
+                地方診所 - NTD 4500
+
+                <input name="B11" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="15000">
+                大醫院 - NTD 15000
+
+                <input name="B11" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                自己好 - NTD 0
+            </div>
+        <div><br>白天照顧小孩 <br>
+                <input name="B12" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="540000">
+                托嬰中心 - 15000*36個月 = NTD 540000
+
+                <input name="B12" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="1260000">
+                到府保母 - 35000*36個月 = NTD 1260000
+
+                <input name="B12" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                隔代教養 - NTD 0
+            </div>
+        <div><br>父母教育手冊 <br>
+                <input name="B13" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="1000">
+                這樣養出下一個主治醫生！(套書)|天下雜誌 - NTD 1000
+
+                <input name="B13" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="25000">
+                不打罵，養出下一個馬斯柯！(套書)|天下雜誌 - NTD 25000
+
+                <input name="B13" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                10個北歐家庭都再用的育兒秘訣，第三點超誇張 - 每日頭條 - NTD 0
+            </div>
+        <div><br>學齡前教材 <br>
+                <input name="B14" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="0">
+                低配 - NTD 2000
+
+                <input name="B14" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="100000">
+                高配 - NTD 20000
+
+                <input name="B14" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="400000">
+                三立新聞 - NTD 0
+            </div>
+        <div><br>嬰兒玩具 <br>
+                <input name="B15" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="2000">
+                淘寶 - NTD 20000
+
+                <input name="B15" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="20000">
+                麗嬰房 - NTD 20000
+
+                <input name="B15" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                親戚送 - NTD 0
+            </div>
+        <div><br>保險 <br>
+                <input name="B16" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="75000">
+                基本 - 25000*3年 = NTD 75000
+
+                <input name="B16" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="150000">
+                保多一點好了 - 50000*3年 = NTD 150000
+
+                <input name="B16" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                相信天擇 - NTD 0
+            </div>
+        <div><br>嬰兒車 <br>
+                <input name="B17" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="2000">
+                家樂福 - NTD 2000
+
+                <input name="B17" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="10000">
+                新光三越 - NTD 10000
+
+                <input name="B17" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                親戚送 - NTD 0
+            </div>      
+    </div>
+    <br><br>  
+    <!--C-->
+    <div class="t3-5">
+        <h2>幼稚園 3-5歲</h2> 
+        <div><br>幼兒食物 <br>
+                <input name="C19" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="180000">
+                低配 - NTD 180000
+
+                <input name="C19" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="540000">
+                有機小農高鈣營養DHA - NTD 540000
+            </div>
+        <div><br>幼兒服飾 <br>
+                <input name="C20" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="18000">
+                夜市 - NTD 18000
+
+                <input name="C20" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="60000">
+                新光三越 - NTD 60000
+            </div>
+
+        <div><br>看感冒三年 15次 <br>
+                <input name="C22" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="4500">
+                地方診所 - NTD 4500
+
+                <input name="C22" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="15000">
+                大醫院 - NTD 15000
+
+                <input name="C22" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                自己好 - NTD 0
+            </div>
+        <div><br>幼稚園學費 <br>
+                <input name="C23" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="180000">
+                公立幼稚園 - 5000*36個月 = NTD 180000
+
+                <input name="C23" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="720000">
+                私立雙語幼稚園 - 20000*36個月 = NTD 720000
+            </div>
+
+        <div><br>幼兒玩具 <br>
+                <input name="C24" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="4000">
+                淘寶 - NTD 4000
+
+                <input name="C24" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="20000">
+                麗嬰房 - NTD 20000
+
+                <input name="C24" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                親戚送 - NTD 0
+            </div>
+        <div><br>三年保險 <br>
+                <input name="C21" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="75000">
+                基本 - 25000*3年 = NTD 75000
+
+                <input name="C21" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="150000">
+                保多一點好了 - 50000*3年 = NTD 150000
+
+                <input name="C21" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                相信天擇 - NTD 0
+            </div>
+    </div>
+    <br><br>  
+    <!--D-->
+    <div class="t6-11">
+        <h2>國小 6-11歲</h2> 
+        <div><br>學校餐費 <br>
+                <input name="D26" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="54000">
+                營養桶餐 - 45*1200天 = NTD 54000
+
+                <input name="D26" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="1200000">
+                訂便當 - 100*1200天 = NTD 1200000
+            </div>
+        <div><br>制服 <br>
+                <input name="D27" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="12000">
+                學校的 - 2000*年 = NTD 12000
+
+                <input name="D27" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="30000">
+                外面訂做 - 5000*6年 = NTD 30000
+            </div>
+        <div><br>便服 <br>
+                <input name="D28" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="36000">
+                低配 - 6000*6年 = NTD 36000
+
+                <input name="D28" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="180000">
+                高配 - 30000*6年 = NTD 180000
+            </div>
+
+        <div><br>看感冒六年 30次 <br>
+                <input name="D30" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="9000">
+                地方診所 - 300*30 = NTD 9000
+
+                <input name="D30" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="21000">
+                大醫院 - 700*30 = NTD 21000
+
+                <input name="D30" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                自己好 - NTD 0
+            </div>
+        <div><br>國小學雜費 <br>
+                <input name="D31" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="24000">
+                公立國小 - 2000*2學期*6年 = NTD 24000
+
+                <input name="D31" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="600000">
+                私立國小 - 50000*2學期*6年 = NTD 600000
+
+                <input name="D31" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="2400000">
+                康橋雙語國小 - 200000*2學期*6年 = NTD 2400000
+            </div>
+
+        <div><br>安親班 <br>
+                <input name="D32" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="360000">
+                一般安親班 - 5000*12月*6年 = NTD 360000
+
+                <input name="D32" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="-624000">
+                當童工 - 時薪100 *4小時 * 5天 * 52週 *6年 = 收入 + NTD 624000
+
+            </div>
+        <div><br>課外活動 <br>
+                <input name="D33" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="216000">
+                才藝班 - 3000*72月 = NTD 216000
+
+                <input name="D33" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="72000">
+                體育活動 - 1000*72月 = NTD 72000
+
+                <input name="D33" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                跳陣頭 = NTD 0 
+            </div>
+
+        <div><br>手機*2 <br>
+                <input name="D34" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="12000">
+                Android低階 - 6000*2 = NTD 12000 
+
+                <input name="D34" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="40000">
+                蘋果 - 20000*2 = NTD 40000
+
+                <input name="D34" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="1000">
+                電話卡*10 = NTD 1000
+            </div>
+
+        <div><br>零用錢 <br>
+                <input name="D35" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="31200">
+                低配 100* 52週* 6年 = NTD 31200 
+
+                <input name="D35" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="312000">
+                高配 1000* 52週* 6年 = NTD 312000
+
+                <input name="D35" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                無 = NTD 0 
+            </div>
+
+            <div><br>家庭旅遊旅費 <br>
+                <input name="D36" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="60000">
+                國內旅遊 - 10000* 6年 = NTD 60000 
+
+                <input name="D36" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="480000">
+                國外旅遊 - 80000* 6年 = NTD 480000
+
+                <input name="D36" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                社區公園 = NTD 0 
+            </div>
+
+        
+        <div><br>腳踏車 <br>
+                <input name="D37" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="1500">
+                低配 = NTD 1500
+
+                <input name="D37" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="12000">
+                高配 = NTD 12000
+
+                <input name="D37" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="0">
+                無 = NTD 0
+            </div>
+    </div>
+    <br><br>  
+    <!--E-->
+    <div class="t12-14">
+        <h2>國中 12-14歲</h2> 
+        <div><br>餐費 <br>
+                <input name="E39" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="27000">
+                桶餐三年 = NTD 27000 
+
+                <input name="E39" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="60000">
+                訂便當三年 = NTD 60000
+            </div>
+            <!------------------------------------------->
+            <div><br>制服 <br>
+                <input name="E40" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="5000">
+                學校買 = NTD 5000 
+
+                <input name="E40" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="20000">
+                外面訂做 = NTD 20000
+            </div>
+            <!------------------------------------------->
+            <div><br>三年便服治裝費 <br>
+                <input name="E41" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="15000">
+                夜市 = NTD 15000 
+
+                <input name="E41" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="150000">
+                潮流精品 = NTD 150000
+            </div>
+            <!------------------------------------------->
+            <div><br>國中學雜費 <br>
+                <input name="E42" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="18000">
+                公立國中 = NTD 18000 
+
+                <input name="E42" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="300000">
+                私立國中 = NTD 300000
+
+                <input name="E42" type="radio"   onclick="displayRadioValue()" 
+                class="C" value="1500000">
+                康橋雙語 = NTD 1500000 
+            </div>
+            <!------------------------------------------->
+            <div><br>補習/安親班 <br>
+                <input name="E43" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="90000">
+                補1~2科 = NTD 90000  
+
+                <input name="E43" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="200000">
+                補全科 = NTD 200000
+
+                <input name="E43" type="radio"   onclick="displayRadioValue()" 
+                class="C" value="-468000">
+                當童工 - 時薪150* 4小時每天* 5天 * 52週 *3年 = 賺 + NTD 468000
+            </div>
+            <!------------------------------------------->
+            <div><br>課外活動 <br>
+                <input name="E44" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="72000">
+                體育活動 - 1000* 72月 = NTD 72000 
+                <input name="E44" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="216000">
+                琴棋書畫 - 3000* 72月 = NTD 216000 
+
+                <input name="E44" type="radio"   onclick="displayRadioValue()" 
+                class="C" value="0">
+                跳陣頭 = NTD 0 
+            </div>
+            <!------------------------------------------->
+            <div><br>零用錢 <br>
+                <input name="E45" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="46800">
+                低配 = NTD 300 *52週 *3年 = 46800 
+
+                <input name="E45" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="312000">
+                高配 = NTD 2000 *52週 *3年 = 312000
+
+                <input name="E45" type="radio"   onclick="displayRadioValue()" 
+                class="C" value="0">
+                無 = NTD 0 
+            </div>
+            <!------------------------------------------->
+            <div><br>筆電 <br>
+                <input name="E46" type="radio"   onclick="displayRadioValue()" 
+                class="A" value="20000">
+                Window = NTD 20000 
+
+                <input name="E46" type="radio"   onclick="displayRadioValue()" 
+                class="B" value="40000">
+                Mac = NTD 40000
+            </div>
+            <!------------------------------------------->
+    </div>
+    <!--F-->
+    <div class="t15-17">
+        <h2>高中 15-17歲</h2> 
+        <div><br>餐費 <br>
+            <input name="F48" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="27000">
+            桶餐三年 = NTD 27000 
+
+            <input name="F48" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="60000">
+            訂便當三年 = NTD 60000
+        </div>
+        <!------------------------------------------>
+        <div><br>制服 <br>
+            <input name="F49" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="5000">
+            學校買 = NTD 5000 
+
+            <input name="F49" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="20000">
+            外面訂做 = NTD 20000
+        </div>
+        <!------------------------------------------>
+        <div><br>便服 <br>
+            <input name="F50" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="15000">
+            低配 = NTD 15000 
+
+            <input name="F50" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="150000">
+            高配 = NTD 150000
+        </div>
+        <!------------------------------------------>
+        <div><br>墮胎 <br>
+            <input name="F51" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="15000">
+            墮 = NTD 15000 
+
+            <input name="F51" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="0">
+            不墮 = NTD 0 (須負擔孫子 0~7 歲費用)
+        </div>
+        <!------------------------------------------>
+        <div><br>牙齒矯正 <br>
+            <input name="F52" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="120000">
+            要 = NTD 120000 
+
+            <input name="F52" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="0">
+            不要 = NTD 0 
+        </div>
+        <!------------------------------------------>
+        <div><br>補習 <br>
+            <input name="F53" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="90000">
+            補1~2科 = NTD 90000
+
+            <input name="F53" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="200000">
+            補全科 = NTD 200000
+
+            <input name="F53" type="radio"   onclick="displayRadioValue()" 
+            class="C" value="0">
+            無 = NTD 0
+        </div>
+        <!------------------------------------------>
+        <div><br>高中學雜費 <br>
+            <input name="F54" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="18000">
+            公立高中 - 3000 *2學期 *3年 = NTD 18000 
+
+            <input name="F54" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="300000">
+            私立高中 - 50000 *2學期 *3年 = NTD 300000
+
+            <input name="F54" type="radio"   onclick="displayRadioValue()" 
+            class="C" value="1800000">
+            康橋雙語高中 - 300000 *2學期 *3年 = NTD 1800000  
+        </div>
+        <!------------------------------------------>
+        <div><br>零用錢 <br>
+            <input name="F55" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="78000">
+            低配 - 500 *52週 *3年 = NTD 78000  
+
+            <input name="F55" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="468000">
+            高配 - 3000 *52週 *3年 = NTD 468000
+
+            <input name="F55" type="radio"   onclick="displayRadioValue()" 
+            class="C" value="0">
+            無 = NTD  0
+        </div>
+        <!------------------------------------------>
+        <div><br>手機*1 <br>
+            <input name="F56" type="radio"   onclick="displayRadioValue()" 
+            class="A" value="6000">
+            Android低階 = NTD 6000 
+
+            <input name="F56" type="radio"   onclick="displayRadioValue()" 
+            class="B" value="20000">
+            Apple = NTD 20000
+
+            <input name="F56" type="radio"   onclick="displayRadioValue()" 
+            class="C" value="500">
+            電話卡*5 = NTD 500 
+        </div>
+        <!------------------------------------------>
+        
+    </div>
+    <!--G-->
+    <div class="t18-21">
+        <h2>大學 18-21歲</h2> 
+                <div><br>餐費 <br>
+                    <input name="G58" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="438000">
+                    低配 - 300 *365天 *4年 = NTD 438000
+
+                    <input name="G58" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="730000">
+                    高配 - 500 *365天 *4年 = NTD 730000
+
+                    <input name="G58" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作啊 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+                <div><br>便服 <br>
+                    <input name="G59" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="20000">
+                    低配 = NTD 20000 
+
+                    <input name="G59" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="200000">
+                    高配 = NTD 200000
+
+                    <input name="G59" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作啊 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+                <div><br>墮胎 <br>
+                    <input name="G60" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="15000">
+                    墮 = NTD 15000
+
+                    <input name="G60" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="0">
+                    不墮 = NTD 0 (須負擔孫子 0~5 歲費用)
+                </div>
+                <!--------------------------------------------->
+                <div><br>大學學雜費 <br>
+                    <input name="G61" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="200000">
+                    公立大學 - 25000 *2學期 *4年 = NTD 200000
+
+                    <input name="G61" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="400000">
+                    私立大學 50000 *2學期 *4年 = NTD 400000
+
+                    <input name="G61" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="2400000">
+                    國外大學 = NTD 2400000 
+
+                    <input name="G61" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作阿 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+                <div><br>外宿 <br>
+                    <input name="G62" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="336000">
+                    低配 - 7000 *48月 = NTD 336000 
+
+                    <input name="G62" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="720000">
+                    高配 - 15000 *48月 = NTD 720000
+
+                    <input name="G62" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    住家裡 / 去工作阿 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+                <div><br>零用錢 <br>
+                    <input name="G63" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="104000">
+                    低配 - 500 *52週 *4年 = NTD 104000
+
+                    <input name="G63" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="624000">
+                    高配 - 3000 *52週 *4年 = NTD 624000
+
+                    <input name="G63" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作阿 = NTD 0
+                </div>
+                <!--------------------------------------------->
+                <div><br>機車 <br>
+                    <input name="G64" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="25000">
+                    二手機車 = NTD 25000 
+
+                    <input name="G64" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="80000">
+                    全新機車 = NTD 80000
+
+                    <input name="G64" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作阿 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+                <div><br>筆電 <br>
+                    <input name="G65" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="20000">
+                    Window = NTD 20000 
+
+                    <input name="G65" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="50000">
+                    Mac = NTD 50000 
+                </div>
+                <!--------------------------------------------->
+                <div><br>手機 <br>
+                    <input name="G66" type="radio"   onclick="displayRadioValue()" 
+                    class="A" value="6000">
+                    Android低階 = NTD 6000
+
+                    <input name="G66" type="radio"   onclick="displayRadioValue()" 
+                    class="B" value="20000">
+                    Apple = NTD 20000
+
+                    <input name="G66" type="radio"   onclick="displayRadioValue()" 
+                    class="C" value="0">
+                    去工作阿 = NTD 0 
+                </div>
+                <!--------------------------------------------->
+            
+    </div>
+      
+
+      
+<script src="script.js"></script>
+</body>
+</html>                
